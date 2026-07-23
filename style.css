@@ -606,3 +606,29 @@ color:#ddd;
 margin:10px 0;
 
 }
+
+/* ================= MOBILE RESPONSIVE FIXES ================= */
+
+@media (max-width:768px){
+
+    /* Logo */
+    .logo{
+        color:#D4AF37;
+    }
+
+    .logo span{
+        color:#ffffff;
+    }
+
+    /* Hide navigation links */
+    .nav-links{
+        display:none;
+    }
+
+    /* Statistics text */
+    .stat-box h3,
+    .stat-box p{
+        color:#ffffff;
+    }
+
+}
