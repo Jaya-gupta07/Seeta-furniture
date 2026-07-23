@@ -39,7 +39,7 @@ img{
     position:fixed;
     top:0;
     left:0;
-    background:rgba(18,18,18,45);
+    background:rgba(18,18,18,0.95);
     backdrop-filter:blur(12px);
     box-shadow:0 5px 20px rgba(0,0,0,.08);
     z-index:1000;
@@ -609,10 +609,27 @@ margin:10px 0;
 
 /* ================= MOBILE RESPONSIVE FIXES ================= */
 
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    color:#D4AF37;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* ---------- MOBILE ---------- */
+
 @media (max-width:768px){
+
+    /* Navbar */
+    .navbar{
+        padding:15px 6%;
+        background:rgba(18,18,18,0.95);
+    }
 
     /* Logo */
     .logo{
+        font-size:28px;
         color:#D4AF37;
     }
 
@@ -620,42 +637,22 @@ margin:10px 0;
         color:#ffffff;
     }
 
-    /* Hide navigation links */
-    .nav-links{
-        display:none;
-    }
-
-    /* Statistics text */
-    .stat-box h3,
-    .stat-box p{
-        color:#ffffff;
-    }
-
-}
-
-/* ---------- Mobile Navbar ---------- */
-
-.menu-toggle{
-    display:none;
-    font-size:30px;
-    color:#D4AF37;
-    cursor:pointer;
-}
-
-@media(max-width:768px){
-
+    /* Hamburger */
     .menu-toggle{
         display:block;
+        z-index:1001;
     }
 
+    /* Mobile Navigation */
     nav{
         display:none;
         position:absolute;
-        top:80px;
+        top:100%;
         left:0;
         width:100%;
         background:#111;
-        padding:20px 0;
+        padding:25px 0;
+        box-shadow:0 10px 20px rgba(0,0,0,0.2);
     }
 
     nav.active{
@@ -663,17 +660,144 @@ margin:10px 0;
     }
 
     nav ul{
+        display:flex;
         flex-direction:column;
         align-items:center;
         gap:20px;
     }
 
-    .btn{
-        display:none;
+    nav ul li{
+        width:100%;
+        text-align:center;
     }
-}
 
-.menu-toggle{
-    transition:0.3s;
-    user-select:none;
+    nav ul li a{
+        display:block;
+        color:#ffffff;
+        font-size:16px;
+        padding:8px 0;
+    }
+
+    nav ul li a:hover{
+        color:#D4AF37;
+    }
+
+    /* Book Now button inside mobile menu */
+    nav ul li .btn{
+        display:inline-block;
+        color:#ffffff;
+        padding:10px 25px;
+    }
+
+    /* Hero */
+    .hero{
+        min-height:100vh;
+        height:auto;
+        padding:120px 6% 60px;
+    }
+
+    .hero-content{
+        padding-top:20px;
+    }
+
+    .hero h1{
+        font-size:45px;
+        line-height:1.15;
+    }
+
+    .hero-text{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    /* Sections */
+    .services,
+    .portfolio,
+    .about,
+    .testimonials,
+    .estimator,
+    .contact{
+        padding:70px 6%;
+    }
+
+    .services h2,
+    .section-title h2,
+    .testimonials h2,
+    .contact h2{
+        font-size:36px;
+    }
+
+    /* Portfolio */
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-card img{
+        height:250px;
+    }
+
+    /* About */
+    .about{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .about h2{
+        font-size:36px;
+    }
+
+    .about p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    /* Statistics */
+    .stats{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .stat-box{
+        flex:1;
+        min-width:90px;
+        padding:20px 15px;
+        background:#1f2937;
+    }
+
+    .stat-box h3{
+        color:#D4AF37;
+        font-size:25px;
+    }
+
+    .stat-box p{
+        color:#ffffff;
+        font-size:14px;
+    }
+
+    /* Calculator */
+    .room-size{
+        flex-direction:column;
+    }
+
+    .room-size span{
+        transform:rotate(90deg);
+    }
+
+    /* Contact Info */
+    .contact-info{
+        grid-template-columns:1fr;
+        padding:60px 6%;
+    }
+
+    /* Footer */
+    footer{
+        padding:40px 6%;
+    }
+
 }
