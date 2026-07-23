@@ -16,7 +16,10 @@ function calculateCost(){
 
 }
 
-function toggleMenu() {
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
 
     const menu = document.getElementById("mobileMenu");
     const icon = document.querySelector(".menu-toggle");
@@ -30,3 +33,18 @@ function toggleMenu() {
     }
 
 }
+
+
+/* Close menu after clicking a navigation link */
+
+document.querySelectorAll("#mobileMenu a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("mobileMenu").classList.remove("active");
+
+        document.querySelector(".menu-toggle").innerHTML = "☰";
+
+    });
+
+});
