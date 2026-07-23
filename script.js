@@ -16,6 +16,17 @@ function calculateCost(){
 
 }
 
-function toggleMenu(){
-    document.getElementById("mobileMenu").classList.toggle("active");
+function toggleMenu() {
+
+    const menu = document.getElementById("mobileMenu");
+    const icon = document.querySelector(".menu-toggle");
+
+    menu.classList.toggle("active");
+
+    if(menu.classList.contains("active")){
+        icon.innerHTML = "✕";
+    }else{
+        icon.innerHTML = "☰";
+    }
+
 }
