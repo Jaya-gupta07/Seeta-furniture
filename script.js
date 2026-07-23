@@ -15,3 +15,7 @@ function calculateCost(){
     "Estimated Cost: ₹" + total.toLocaleString("en-IN");
 
 }
+
+function toggleMenu(){
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
