@@ -672,3 +672,8 @@ margin:10px 0;
         display:none;
     }
 }
+
+.menu-toggle{
+    transition:0.3s;
+    user-select:none;
+}
